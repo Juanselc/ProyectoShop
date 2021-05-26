@@ -1,0 +1,2 @@
+class Membresia < ApplicationRecord
+end

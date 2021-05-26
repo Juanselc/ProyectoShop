@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  duracion: 
+  genero: MyString
+  elenco: MyString
+  criticas: MyString
+
+two:
+  title: MyString
+  duracion: 
+  genero: MyString
+  elenco: MyString
+  criticas: MyString
