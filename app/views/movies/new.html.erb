@@ -1,0 +1,46 @@
+<%= form_for :movie, :url => { :action => :create } do |form| %>
+
+<% if @movie.errors.any? %>
+<div id="error_explanation"> 
+<h2>
+<%= pluralize(@movie.errors.count, "") %> ERROR volver a intentar:
+</h2> 
+<ul> 
+<% @movie.errors.full_messages.each do |msg| %> 
+<li><%= msg %></li> 
+<% end %> 
+</ul> 
+</div> 
+<% end %>
+<div>
+<h1> Ingresar nueva pelicula</h1>
+  <div>
+  <br>
+   <%= form.label :titulo %>
+   <%= form.text_field :title %>
+    <br><br>
+   <%= form.label :duracion %>
+   <%= form.text_field :duracion %>
+     <br><br>
+   <%= form.label :genero %>
+   <%= form.text_field :genero %>
+   <br><br>
+   <%= form.label :elenco %>
+   <%= form.text_field :elenco %>
+     <br><br>
+   <%= form.label :criticas %>
+   <%= form.text_field :criticas %>
+  </div>
+  <br><br>
+
+  <div>
+    <%= form.submit %>
+
+  </div><br><br>
+
+  <div>
+  <%= link_to 'Back', :action => :index %>
+
+  </div>
+ </div>
+<%end%>

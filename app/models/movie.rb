@@ -1,4 +1,4 @@
 class Movie < ApplicationRecord
-    def change_column :
-     
+    validates :title, presence: true,length: { minimum: 5 }
+        
 end

@@ -1,0 +1,23 @@
+<p>
+ <strong>Titulo:</strong>
+ <%= @movie.title %>
+</p>
+<p>
+ <strong>Texto:</strong>
+ <%= @movie.duracion %>
+</p>
+<p>
+ <strong>Texto:</strong>
+ <%= @movie.genero %>
+</p>
+<p>
+ <strong>Texto:</strong>
+ <%= @movie.elenco %>
+</p>
+<p>
+ <strong>Texto:</strong>
+ <%= @movie.criticas %>
+ </p>
+
+ <%= link_to 'Back', :action => :index %> | 
+ <%= link_to 'Editar', :action => :edit, :id => @movie.id %>

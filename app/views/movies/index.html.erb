@@ -1,0 +1,36 @@
+<br><br><br>
+<div>
+<h1><center> PELICULAS ONLINE</center></h1>
+
+<div><br><br>
+<table>
+ <tr>
+  <th><center><b>TITULO</th></b></center><br>
+  <th><center>DURACION</th></center>
+  <th><center>GENERO</th></center>
+  <th><center>ELENCO</th></center>
+  <th><center>CRITICAS</th></center>
+  </tr>
+
+ <% @movie.each do |movie| %>
+ <tr>
+  <td><center><%= movie.title %></center></td><td
+  <td><center><%= movie.duracion %></center></td>
+  <td><center><%= movie.genero %></center></td>
+  <td><center><%= movie.elenco %></center></td>
+  <td><center><%= movie.criticas %></center></td>
+  <td><%= link_to 'Mostrar', :action => :show, :id => movie.id %></td>
+  <td><%= link_to 'Editar', :action => :edit, :id => movie.id %></td>
+  <td><%= link_to 'Eliminar', { :action => :destroy, :id => movie.id },
+            :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br><br><br>
+
+<div>
+
+<%= link_to 'Nueva peli', :action => :new %>
+  </div>
+  </div>

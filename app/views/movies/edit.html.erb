@@ -1,0 +1,38 @@
+<h1><center>Edicion de pelis<center></h1>
+<%= form_for :movie, url: { :action => :update, :id => @movie.id },
+:method => :put do |form| %>
+ <% if @movie.errors.any? %> <div id="error_explanation"> 
+ <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this article from being saved:</h2>
+     <ul> <% @movie.errors.full_messages.each do |msg| %> 
+        <li><%= msg %></li> 
+        <% end %> 
+    </ul> 
+    </div> 
+    <% end %> 
+    <div>
+     <p>
+     <br>
+     <%= form.label :titulo %>
+     <%= form.text_field :title %>
+     <br><br>
+     <%= form.label :duracion %>
+     <%= form.text_field :duracion %>
+     <br><br>
+     <%= form.label :genero %>
+     <%= form.text_field :genero %>
+     <br><br>
+     <%= form.label :elenco %>
+     <%= form.text_field :elenco %>
+     <br><br>
+     <%= form.label :criticas %>
+     <%= form.text_field :criticas %>
+     </p>
+   </div>
+   <br><br>
+
+  <div>
+    <%= form.submit "Actualizar" %>
+  </div><br><br>
+<%end%>
+
+<%= link_to 'Back', :action => :index %>
